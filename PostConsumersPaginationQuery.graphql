@@ -1,0 +1,14 @@
+query PostConsumersPaginationQuery(
+    $postId: BigInt!
+    $first: Int!
+    $after: String
+    $includeViewCount: Boolean = false
+) {
+    poePost(poePostId: $postId) {
+        id
+        viewCount @include(if: $includeViewCount)
+        consumersConnection(first: $first, after: $after) {
+            ...PostConsumersFragment
+        }
+    }
+}

@@ -1,0 +1,11 @@
+query UserPostsQuery($uid: BigInt!) {
+    poeUser(uid: $uid) {
+        id
+        uid
+        posts {
+            id
+            __typename
+            ...PostFragment
+        }
+    }
+}

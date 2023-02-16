@@ -1,0 +1,8 @@
+mutation SetBioMutation($bio: String!) {
+    poeSetBio(bio: $bio) {
+        status
+        viewer {
+            ...BioFragment
+        }
+    }
+}

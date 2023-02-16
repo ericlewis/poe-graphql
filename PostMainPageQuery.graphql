@@ -1,0 +1,5 @@
+query PostMainPageQuery($postId: BigInt!) {
+    poePost(poePostId: $postId) {
+        ...PostFragment
+    }
+}

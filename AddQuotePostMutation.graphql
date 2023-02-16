@@ -1,0 +1,11 @@
+mutation AddQuotePostMutation($quotedPostId: BigInt!, $title: String!, $bodyText: String) {
+    poeAddQuotePost(quotedPostId: $quotedPostId, title: $title, bodyText: $bodyText) {
+        status
+        post {
+            title
+            postType
+            ...AuthorPostIdsFragment
+            ...PostFragment
+        }
+    }
+}

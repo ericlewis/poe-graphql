@@ -1,0 +1,11 @@
+mutation SystemNotifPromptStepMutation(
+    $state: PushNotifAcceptanceState!
+    $source: PushNotifPromptSource!
+) {
+    systemNotifPromptStep(state: $state, source: $source) {
+        viewer {
+            id
+            uid
+        }
+    }
+}

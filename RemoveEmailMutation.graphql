@@ -1,0 +1,8 @@
+mutation RemoveEmailMutation($emailAddress: String!) {
+    removeEmail(emailAddress: $emailAddress) {
+        viewer {
+            id
+            confirmedEmails
+        }
+    }
+}

@@ -1,0 +1,8 @@
+query ProfileInfoQuery {
+    viewer {
+        id
+        primaryPhoneNumber
+        primaryEmail
+        confirmedEmails
+    }
+}

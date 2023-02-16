@@ -1,0 +1,11 @@
+mutation AppleInAppPurchasesUpdatePurchaseMutation(
+    $transaction: AppleInAppPurchasesTransaction!
+) {
+    appleInAppPurchasesUpdatePurchase(
+        transaction: $transaction
+    ) {
+        viewer {
+            __typename
+        }
+    }
+}

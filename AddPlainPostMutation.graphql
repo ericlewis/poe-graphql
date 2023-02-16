@@ -1,0 +1,12 @@
+mutation AddPlainPostMutation($title: String!, $bodyText: String!) {
+    poeAddPlainPost(title: $title, bodyText: $bodyText) {
+        status
+        post {
+            id
+            title
+            postType
+            ...AuthorPostIdsFragment
+            ...PostFragment
+        }
+    }
+}

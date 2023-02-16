@@ -1,0 +1,9 @@
+mutation SignupOrLoginWithGoogleMutation(
+    $accessToken: String!
+) {
+    signupOrLoginWithGoogle(
+        accessToken: $accessToken
+    ) {
+        status
+    }
+}

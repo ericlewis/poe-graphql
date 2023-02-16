@@ -1,0 +1,14 @@
+fragment PostConsumersFragment on PostUserConnection {
+    pageInfo {
+      endCursor
+      hasNextPage
+    }
+    edges {
+        hasLiked
+        hasReposted
+        node {
+            id
+            ...UserSnippetFragment
+        }
+    }
+}

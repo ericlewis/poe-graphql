@@ -1,0 +1,13 @@
+mutation SetNameMutation($name: String!) {
+    poeSetName(name: $name) {
+        status
+        viewer {
+            id
+            poeUser {
+                id
+                uid
+                fullName
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+mutation SendVerificationCodeForUpdateProfileInfoMutation(
+    $emailAddress: String
+    $phoneNumber: String
+    $verificationReason: VerificationReason!
+) {
+    sendVerificationCode(
+        verificationReason: $verificationReason
+        emailAddress: $emailAddress
+        phoneNumber: $phoneNumber
+    ) {
+        status
+    }
+}

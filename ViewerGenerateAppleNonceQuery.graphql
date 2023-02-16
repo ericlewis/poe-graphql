@@ -1,0 +1,6 @@
+query ViewerGenerateAppleNonceQuery {
+    viewer {
+        id
+        appleNonce
+    }
+}

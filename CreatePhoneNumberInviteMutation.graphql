@@ -1,0 +1,9 @@
+mutation CreatePhoneNumberInviteMutation($phoneNumber: String!) {
+    createPhoneNumberInvite(phoneNumber: $phoneNumber) {
+        status
+        viewer {
+            id
+            numInviteCreationsRemaining
+        }
+    }
+}

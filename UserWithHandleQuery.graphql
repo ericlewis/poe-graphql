@@ -1,0 +1,6 @@
+query UserWithHandleQuery($handle: String!) {
+    userWithHandle(handle: $handle) {
+        id
+        ...UserSnippetFragment
+    }
+}

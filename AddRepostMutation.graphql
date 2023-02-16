@@ -1,0 +1,11 @@
+mutation AddRepostMutation($parentPostId: BigInt!) {
+    poeAddRepost(parentPostId: $parentPostId) {
+        status
+        post {
+            id
+            postType
+            ...AuthorPostIdsFragment
+            ...PostFragment
+        }
+    }
+}

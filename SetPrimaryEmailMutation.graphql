@@ -1,0 +1,8 @@
+mutation SetPrimaryEmailMutation($emailAddress: String!) {
+    setPrimaryEmail(emailAddress: $emailAddress) {
+        viewer {
+            id
+            primaryEmail
+        }
+    }
+}

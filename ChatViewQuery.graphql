@@ -1,0 +1,5 @@
+query ChatViewQuery($bot: String!) {
+    chatOfBot(bot: $bot) {
+        ...ChatFragment
+    }
+}

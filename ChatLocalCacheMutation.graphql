@@ -1,0 +1,19 @@
+query ChatLocalCacheMutation(
+  $bot: String!
+  $before: String
+  $last: Int!
+) @apollo_client_ios_localCacheMutation {
+  chatOfBot(bot: $bot) {
+    messagesConnection(before: $before, last: $last) {
+      pageInfo {
+        hasPreviousPage
+      }
+      edges {
+        node {
+          id
+          __typename
+        }
+      }
+    }
+  }
+}

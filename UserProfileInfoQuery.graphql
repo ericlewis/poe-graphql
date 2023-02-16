@@ -1,0 +1,21 @@
+query UserProfileInfoQuery($uid: BigInt!) {
+    poeUser(uid: $uid) {
+        id
+        ...UserSnippetFragment
+        viewerIsFollowing
+        viewerIsFollowedBy
+        followerCount
+        followers {
+            id
+            ...UserSnippetFragment
+        }
+        followeeCount
+        followees {
+            id
+            ...UserSnippetFragment
+        }
+        posts {
+            ...PostFragment
+        }
+    }
+}

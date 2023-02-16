@@ -1,0 +1,11 @@
+mutation DeletePostMutation($poePostId: BigInt!) {
+    poeDeletePost(poePostId: $poePostId) {
+        post {
+            id
+            poePostId
+            isDeleted
+            ...AuthorPostIdsFragment
+        }
+        status
+    }
+}

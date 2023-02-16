@@ -1,0 +1,9 @@
+mutation AddEmailMutation($verificationCode: String!, $emailAddress: String!) {
+    addEmail(verificationCode: $verificationCode, emailAddress: $emailAddress) {
+        status
+        viewer {
+            id
+            confirmedEmails
+        }
+    }
+}

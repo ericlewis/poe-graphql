@@ -1,0 +1,7 @@
+mutation AddMessageBreakMutation($chatId: BigInt!) {
+    messageBreakCreate(chatId: $chatId) {
+        message {
+            ...MessageFragment
+        }
+    }
+}

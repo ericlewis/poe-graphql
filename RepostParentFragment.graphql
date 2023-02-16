@@ -1,0 +1,40 @@
+fragment RepostParentFragment on PoePost {
+    id
+    poePostId
+    author {
+        id
+        ...UserSnippetFragment
+    }
+    creationTime
+    title
+    postType
+    bodyText
+    share {
+        id
+        chatBot {
+            id
+            displayName
+            poweredBy
+            profilePicture
+        }
+        messages {
+            id
+            messageId
+            author
+            didSkipContext
+            sendTime
+            text
+        }
+    }
+    likeCount
+    viewCount
+    viewerHasLiked
+    viewerHasViewed
+    repostCount
+    quotePostCount
+    isDeleted,
+    url
+    quotedPost {
+        ...QuotedPostFragment
+    }
+}

@@ -1,0 +1,15 @@
+mutation AddPostLikeMutation($postId: BigInt!) {
+    addPostLike(postId: $postId) {
+        post {
+            id
+            __typename
+            ...PostLikeUnlikeFragment
+            repostParent {
+                id
+                __typename
+                ...PostLikeUnlikeFragment
+            }
+        }
+        status
+    }
+}

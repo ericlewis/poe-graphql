@@ -1,0 +1,15 @@
+mutation UpdatePrimaryPhoneNumberMutation(
+    $verificationCode: String!
+    $phoneNumber: String!
+) {
+    updatePrimaryPhoneNumber(
+        verificationCode: $verificationCode
+        phoneNumber: $phoneNumber
+    ) {
+        status
+        viewer {
+            id
+            primaryPhoneNumber
+        }
+    }
+}

@@ -1,0 +1,14 @@
+query ViewerInvitesHistoryPageQuery(
+    $status: InviteStatus
+    $inviteType: InviteType
+) {
+    viewer {
+        id
+        invitesCreated(status: $status, inviteType: $inviteType) {
+            creationTime
+            inviteCode
+            invitedPhoneNumber
+            status
+        }
+    }
+}

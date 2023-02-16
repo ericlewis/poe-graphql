@@ -1,0 +1,14 @@
+query FetchFeedQuery(
+    $numStories: Int!,
+    $offset: Int!,
+    $alreadyShownStories: [BigInt!]
+) {
+    poeFeed(
+        algorithm: heuristic_v1,
+        numStories: $numStories,
+        offset: $offset,
+        alreadyShownStories: $alreadyShownStories
+    ) {
+        ...PostFragment
+    }
+}

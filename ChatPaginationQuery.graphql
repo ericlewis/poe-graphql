@@ -1,0 +1,16 @@
+query ChatPaginationQuery($bot: String!, $before: String, $last: Int! = 10) {
+    chatOfBot(bot: $bot) {
+        id
+        __typename
+        messagesConnection(before: $before, last: $last) {
+            pageInfo {
+                hasPreviousPage
+            }
+            edges {
+                node {
+                    ...MessageFragment
+                }
+            }
+        }
+    }
+}

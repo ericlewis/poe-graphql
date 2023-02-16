@@ -1,0 +1,11 @@
+mutation AddPostViewMutation($postId: BigInt!) {
+    addPostView(postId: $postId) {
+        post {
+            id
+            __typename
+            viewCount
+            viewerHasViewed
+        }
+        status
+    }
+}

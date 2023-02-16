@@ -1,0 +1,8 @@
+fragment ProfilePhotoUrlFragment on Viewer {
+    id
+    poeUser {
+        id
+        uid
+        profilePhotoURL: profilePhotoUrl
+    }
+}

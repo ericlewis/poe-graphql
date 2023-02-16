@@ -1,0 +1,47 @@
+fragment PostFragment on PoePost {
+    id
+    poePostId
+    postType
+    author {
+        id
+        ...UserSnippetFragment
+    }
+    creationTime
+    title
+    bodyText
+    share {
+        id
+        chatBot {
+            id
+            displayName
+            poweredBy
+            profilePicture
+        }
+        messages {
+            id
+            messageId
+            author
+            didSkipContext
+            sendTime
+            text
+        }
+    }
+    likeCount
+    viewCount
+    viewerHasLiked
+    viewerHasViewed
+    consumersConnection {
+        ...PostConsumersFragment
+    }
+    repostParent {
+        ...RepostParentFragment
+    }
+    quotedPost {
+        ...QuotedPostFragment
+    }
+    repostCount
+    quotePostCount
+    isDeleted
+    url
+}
+

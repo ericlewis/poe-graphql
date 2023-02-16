@@ -1,0 +1,11 @@
+mutation MarkMultiplayerNUXComplete {
+  markMultiplayerNuxCompleted {
+    viewer {
+      id
+      poeUser {
+        id
+        uid
+      }
+    }
+  }
+}

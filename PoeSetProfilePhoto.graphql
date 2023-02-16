@@ -1,0 +1,8 @@
+mutation PoeSetProfilePhoto($url: String!) {
+  poeSetProfilePhoto(url: $url) {
+    status
+    viewer {
+        ...ProfilePhotoUrlFragment
+    }
+  }
+}

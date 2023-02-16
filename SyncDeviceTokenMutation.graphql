@@ -1,0 +1,8 @@
+mutation SyncDeviceTokenMutation($deviceToken: String!) {
+    syncDeviceToken(deviceToken: $deviceToken) {
+        viewer {
+            id
+            uid
+        }
+    }
+}

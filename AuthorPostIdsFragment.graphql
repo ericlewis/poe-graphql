@@ -1,0 +1,12 @@
+fragment AuthorPostIdsFragment on PoePost {
+    id
+    __typename
+    author {
+        id
+        __typename
+        posts {
+            id
+            __typename
+        }
+    }
+}

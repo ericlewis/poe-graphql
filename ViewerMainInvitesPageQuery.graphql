@@ -1,0 +1,7 @@
+query ViewerMainInvitesPageQuery {
+    viewer {
+        id
+        canCreateMoreInvites
+        numInviteCreationsRemaining
+    }
+}

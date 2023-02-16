@@ -1,0 +1,9 @@
+mutation DeleteAccountMutation {
+    deleteAccount {
+        viewer {
+            id
+            uid
+            ...ViewerStateFragment
+        }
+    }
+}

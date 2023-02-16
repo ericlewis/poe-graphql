@@ -1,0 +1,17 @@
+mutation AddSharePostMutation(
+    $title: String!
+    $bodyText: String
+    $chatId: BigInt!
+    $messageIds: [BigInt!]!
+) {
+    poeAddSharePost(title: $title, bodyText: $bodyText, chatId: $chatId, messageIds: $messageIds) {
+        status
+        post {
+            id
+            title
+            postType
+            ...AuthorPostIdsFragment
+            ...PostFragment
+        }
+    }
+}

@@ -1,0 +1,15 @@
+mutation RemovePostLikeMutation($postId: BigInt!) {
+    removePostLike(postId: $postId) {
+        post {
+            id
+            __typename
+            ...PostLikeUnlikeFragment
+            repostParent {
+                id
+                __typename
+                ...PostLikeUnlikeFragment
+            }
+        }
+        status
+    }
+}

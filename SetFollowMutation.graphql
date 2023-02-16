@@ -1,0 +1,20 @@
+mutation SetFollowMutation($targetUid: BigInt!, $shouldFollow: Boolean!) {
+    poeUserSetFollow(targetUid: $targetUid, shouldFollow: $shouldFollow) {
+        user {
+            id
+            uid
+            viewerIsFollowing
+            viewerIsFollowedBy
+            followerCount
+            followers {
+                id
+                ...UserSnippetFragment
+            }
+            followeeCount
+            followees {
+                id
+                ...UserSnippetFragment
+            }
+        }
+    }
+}

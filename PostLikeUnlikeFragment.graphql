@@ -1,0 +1,6 @@
+fragment PostLikeUnlikeFragment on PoePost {
+    id
+    __typename
+    likeCount
+    viewerHasLiked
+}

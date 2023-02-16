@@ -1,0 +1,15 @@
+mutation SignupOrLoginWithAppleMutation(
+    $identityToken: String,
+    $useCachedUserInfo: Boolean,
+    $givenName: String,
+    $familyName: String
+) {
+    signupOrLoginWithApple(
+        identityToken: $identityToken,
+        useCachedUserInfo: $useCachedUserInfo,
+        givenName: $givenName,
+        familyName: $familyName
+    ) {
+        status
+    }
+}

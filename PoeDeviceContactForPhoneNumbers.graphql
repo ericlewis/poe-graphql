@@ -1,0 +1,10 @@
+query PoeDeviceContactForPhoneNumbers($phoneNumbers: [String!]!) {
+  poeDeviceContactForPhoneNumbers(phoneNumbers: $phoneNumbers) {
+    poeUser {
+        id
+        uid
+        ...UserSnippetFragment
+    }
+    contactPhoneNumber
+  }
+}

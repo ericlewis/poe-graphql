@@ -1,0 +1,8 @@
+mutation SetHandleMutation($handle: String!) {
+    poeSetHandle(handle: $handle) {
+        status
+        viewer {
+            ...HandleFragment
+        }
+    }
+}

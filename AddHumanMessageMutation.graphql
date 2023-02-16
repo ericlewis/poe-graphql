@@ -1,0 +1,32 @@
+mutation AddHumanMessageMutation(
+    $chatId: BigInt!
+    $bot: String!
+    $query: String!
+    $source: MessageSource
+    $withChatBreak: Boolean! = false
+) {
+    messageCreateWithStatus(
+        chatId: $chatId
+        bot: $bot
+        query: $query
+        source: $source
+        withChatBreak: $withChatBreak
+    ) {
+        message {
+            ...MessageFragment
+            chat {
+                id
+                shouldShowDisclaimer
+            }
+        }
+        messageLimit{
+          canSend
+          numMessagesRemaining
+          resetTime
+          shouldShowReminder
+        }
+        chatBreak {
+            ...MessageFragment
+        }
+    }
+}
